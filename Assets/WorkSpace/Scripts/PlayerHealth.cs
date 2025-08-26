@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
         //HP‚Ì‰Šú‰»
         _currentHP = _maxHP;
     }
-    public void Damage(int _damage)
+    public void EnemytoPlayerDamage(int _damage)
     {
         //0‚ğ‰º‰ñ‚ç‚È‚¢‚æ‚¤‚É‚·‚é
         _currentHP = Mathf.Max(_currentHP - _damage, 0);
