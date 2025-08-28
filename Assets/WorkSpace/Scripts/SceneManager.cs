@@ -17,7 +17,6 @@ public class MySceneManager : MonoBehaviour
        // _Settingbutton.onClick.AddListener(SettingScene);
     }
 
-    // Update is called once per frame
     void SceneChange()
     {
         SceneManager.LoadScene(SelectScene);

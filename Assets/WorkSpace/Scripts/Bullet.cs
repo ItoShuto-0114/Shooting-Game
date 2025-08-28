@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int _DamagetoPlayer = 10;
     [SerializeField] private int _DamagetoEnemy = 10;
     [Header("“G‚Ì’e‚¾‚Á‚½‚çtrueAplayer‚Ì’e‚¾‚Á‚½‚çfalse")]
+    private Transform _player;
     [SerializeField] private bool _Targets = true;
     public enum BulletType
     {
@@ -67,5 +68,8 @@ public class Bullet : MonoBehaviour
            
          }
         #endregion
+
     }
+
+    
 }

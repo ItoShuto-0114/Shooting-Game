@@ -187,6 +187,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f84c1c98ae158ed449a5f8abc02810dd, type: 3}
+--- !u!1 &220260517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 220260518}
+  m_Layer: 0
+  m_Name: Enemymuzzle (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &220260518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220260517}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.99144495, w: -0.13052607}
+  m_LocalPosition: {x: 0.004999995, y: 11.47, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 195}
 --- !u!224 &462233911 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8908904553562135753, guid: 80166f5c64e573648ade94533810e347, type: 3}
@@ -394,6 +425,37 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &806299014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 806299015}
+  m_Layer: 0
+  m_Name: Enemymuzzle (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &806299015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806299014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.9914449, w: 0.13052626}
+  m_LocalPosition: {x: -0.027, y: -0.506, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1558824721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 165}
 --- !u!1001 &989167830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,35 +831,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1558824717 stripped
+--- !u!1 &1425125206
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6946910508315243157, guid: 80166f5c64e573648ade94533810e347, type: 3}
-  m_PrefabInstance: {fileID: 1801382827}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1558824721
-MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558824717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2932b5746ceb4c14d9b20530d2752f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _Enemymuzzle: {fileID: 0}
-  _Enemymuzzle1: {fileID: 0}
-  _Enemymuzzle2: {fileID: 0}
-  _BulletPrefab: {fileID: 0}
-  _BulletPrefab1: {fileID: 0}
-  _BulletPrefab2: {fileID: 0}
-  _BulletSpeed: 10
-  _EnemyAttackInterval: 1
-  _Enemy1MaxHp: 100
-  _EnemycurrentHP: 100
-  _EnemyHpBar: {fileID: 0}
-  _Width: 100
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425125207}
+  m_Layer: 0
+  m_Name: Enemymuzzle (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1425125207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425125206}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.9659258, w: 0.2588191}
+  m_LocalPosition: {x: -0.027, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1558824721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 150}
+--- !u!4 &1558824721 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4256782825630462945, guid: 80166f5c64e573648ade94533810e347, type: 3}
+  m_PrefabInstance: {fileID: 1801382827}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1801382827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -809,6 +878,14 @@ PrefabInstance:
     - target: {fileID: 493005767949081891, guid: 80166f5c64e573648ade94533810e347, type: 3}
       propertyPath: m_Name
       value: EnemyHP
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546684835878881253, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.027
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546684835878881253, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2487106113934922009, guid: 80166f5c64e573648ade94533810e347, type: 3}
       propertyPath: m_Color.a
@@ -911,6 +988,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 462233911}
     - target: {fileID: 4590016634496085612, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: _BulletSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590016634496085612, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: _Enemy1MaxHp
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590016634496085612, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: _Enemymuzzle1
+      value: 
+      objectReference: {fileID: 220260518}
+    - target: {fileID: 4590016634496085612, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: _Enemymuzzle2
+      value: 
+      objectReference: {fileID: 806299015}
+    - target: {fileID: 4590016634496085612, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: _Enemymuzzle3
+      value: 
+      objectReference: {fileID: 1425125207}
+    - target: {fileID: 4590016634496085612, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: _Enemymuzzle4
+      value: 
+      objectReference: {fileID: 1910487932}
+    - target: {fileID: 4590016634496085612, guid: 80166f5c64e573648ade94533810e347, type: 3}
       propertyPath: _BulletPrefab1
       value: 
       objectReference: {fileID: 7433822340861082767, guid: 1e22b89c9b997bf4dbed461b9c2d5014, type: 3}
@@ -918,6 +1019,18 @@ PrefabInstance:
       propertyPath: _BulletPrefab2
       value: 
       objectReference: {fileID: 7433822340861082767, guid: 1e22b89c9b997bf4dbed461b9c2d5014, type: 3}
+    - target: {fileID: 4590016634496085612, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: _BulletPrefab3
+      value: 
+      objectReference: {fileID: 7433822340861082767, guid: 1e22b89c9b997bf4dbed461b9c2d5014, type: 3}
+    - target: {fileID: 4590016634496085612, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: _BulletPrefab4
+      value: 
+      objectReference: {fileID: 7433822340861082767, guid: 1e22b89c9b997bf4dbed461b9c2d5014, type: 3}
+    - target: {fileID: 4590016634496085612, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      propertyPath: _EnemyAttackInterval
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6946910508315243157, guid: 80166f5c64e573648ade94533810e347, type: 3}
       propertyPath: m_Name
       value: Enemy 1
@@ -952,12 +1065,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6946910508315243157, guid: 80166f5c64e573648ade94533810e347, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1558824721}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4256782825630462945, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 806299015}
+    - targetCorrespondingSourceObject: {fileID: 4256782825630462945, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1425125207}
+    - targetCorrespondingSourceObject: {fileID: 4256782825630462945, guid: 80166f5c64e573648ade94533810e347, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1910487932}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80166f5c64e573648ade94533810e347, type: 3}
+--- !u!1 &1910487931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910487932}
+  m_Layer: 0
+  m_Name: Enemymuzzle (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1910487932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910487931}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: 0.9659259, w: -0.25881898}
+  m_LocalPosition: {x: -0.027, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1558824721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 210}
 --- !u!1 &1942047558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,3 +1198,4 @@ SceneRoots:
   - {fileID: 509984112}
   - {fileID: 98231519}
   - {fileID: 1942047560}
+  - {fileID: 220260518}
