@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 public class Enemy1 : MonoBehaviour
 {
+    [SerializeField]MyGameManager _myGameManager;
     [SerializeField] private Transform _Enemymuzzle;
     [SerializeField] private Transform _Enemymuzzle1;
     [SerializeField] private Transform _Enemymuzzle2;
@@ -19,6 +20,11 @@ public class Enemy1 : MonoBehaviour
     [SerializeField] RectTransform _EnemyHpBar;
     [SerializeField] float _Width = 100;
     float _timer = 0;
+    void Awake()
+    {
+        if (_myGameManager == null)
+            _myGameManager = FindObjectOfType<MyGameManager>();
+    }
     void Start()
     {
         _EnemycurrentHP = _Enemy1MaxHp;
@@ -68,7 +74,7 @@ public class Enemy1 : MonoBehaviour
         UpdateHpBar();
         if (_EnemycurrentHP <= 0)
         {
-            GameWin();
+            _myGameManager.GameWin();
         }
         Debug.Log(_damage + "ƒ_ƒ[ƒW—^‚¦‚½");
     }

@@ -1185,10 +1185,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d569bb1685138924d81989139c35dfd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectScene: StageSelect
-  SettingScene: 
+  _SelectScene: StageSelect
+  _Stage1Scene: Stage1
+  _Stage2Scene: 
+  _Stage3Scene: 
   _Startbutton: {fileID: 1874728062}
   _Exitbutton: {fileID: 1340777166}
+  _Stage1button: {fileID: 0}
+  _Stage2button: {fileID: 0}
+  _Stage3button: {fileID: 0}
   _Settingbutton: {fileID: 1828006097}
   _image: {fileID: 0}
 --- !u!4 &1934996492

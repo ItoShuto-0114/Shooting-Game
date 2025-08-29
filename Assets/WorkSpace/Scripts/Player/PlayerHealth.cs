@@ -1,12 +1,18 @@
 using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField]MyGameManager _myGameManager;
     [Header("HP")]
     [SerializeField] float _maxHP = 100;
     [SerializeField] float _currentHP = 100;
     [SerializeField] RectTransform _PlayerHpBar;
     float _Width = 100;
     [SerializeField] public bool _isdead = false;
+    void Awake()
+    {
+        if (_myGameManager == null)
+            _myGameManager = FindObjectOfType<MyGameManager>();
+    }
     void Start()
     {
         //HPÇÃèâä˙âª
@@ -31,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
     void Gameover()
     {
         _isdead = true;
-        Debug.Log("Gameover");
+        _myGameManager.GameOver();
     }
     //void Heal()
     //{
