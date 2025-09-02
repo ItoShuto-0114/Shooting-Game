@@ -83,8 +83,4 @@ public class Enemy1 : MonoBehaviour
         float ratio = _EnemycurrentHP / _Enemy1MaxHp;
         _EnemyHpBar.sizeDelta = new Vector2(_Width * ratio, _EnemyHpBar.sizeDelta.y);
     }
-    void GameWin()
-    {
-        Debug.Log("èüÇøÅI");
-    }
 }

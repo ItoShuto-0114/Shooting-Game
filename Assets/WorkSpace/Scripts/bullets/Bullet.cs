@@ -24,9 +24,16 @@ public class Bullet : MonoBehaviour
             if (collision.CompareTag("Enemy") && _Targets == false)
             {
                 var Enemy1 = collision.GetComponent<Enemy1>();
+                var Enemy2 = collision.GetComponent<Enemy2>();
                 if (Enemy1 != null)
                 {
                     Enemy1.PlayertoDamage(_DamagetoEnemy);
+                    Destroy(gameObject);
+                }
+                if (Enemy2 != null)
+
+                {
+                    Enemy2.PlayertoDamage(_DamagetoEnemy);
                     Destroy(gameObject);
                 }
             }
@@ -38,37 +45,38 @@ public class Bullet : MonoBehaviour
                     player.EnemytoPlayerDamage(_DamagetoPlayer);
                     Destroy(gameObject);
                 }
-            }
-        }
-        #endregion
 
-        #region プレイヤーホーミング弾
-        if (_bulletType == BulletType.homingbullet && collision.CompareTag("Enemy") && _Targets == false)
-        {
-            var Enemy1 = collision.GetComponentInParent<Enemy1>();
-            if (Enemy1 != null)
+            }
+            #endregion
+
+            #region プレイヤーホーミング弾
+            if (_bulletType == BulletType.homingbullet && collision.CompareTag("Enemy") && _Targets == false)
             {
-                Enemy1.PlayertoDamage(_DamagetoEnemy);
-                Destroy(gameObject);
+                var Enemy1 = collision.GetComponentInParent<Enemy1>();
+                if (Enemy1 != null)
+                {
+                    Enemy1.PlayertoDamage(_DamagetoEnemy);
+                    Destroy(gameObject);
+                }
             }
+
+            #endregion
+
+            #region 敵ホーミング弾
+            else if (_bulletType == BulletType.homingbullet && collision.CompareTag("Player") && _Targets == true)
+            {
+                var player = collision.GetComponentInParent<PlayerHealth>();
+                if (player != null)
+                {
+                    player.EnemytoPlayerDamage(_DamagetoPlayer);
+                    Destroy(gameObject);
+                }
+
+            }
+            #endregion
+
         }
 
-        #endregion
-
-        #region 敵ホーミング弾
-        else if (_bulletType == BulletType.homingbullet && collision.CompareTag("Player") && _Targets == true)
-        {
-            var player = collision.GetComponentInParent<PlayerHealth>();
-            if (player != null)
-            {
-                player.EnemytoPlayerDamage(_DamagetoPlayer);
-                Destroy(gameObject);
-            }
-           
-         }
-        #endregion
 
     }
-
-    
 }

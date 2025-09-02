@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletType: 0
-  _DamagetoPlayer: 10
+  _DamagetoPlayer: 40
   _DamagetoEnemy: 10
   _Targets: 1
 --- !u!50 &196412316175242871
