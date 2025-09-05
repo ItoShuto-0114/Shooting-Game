@@ -13,18 +13,18 @@ public class MySceneManager : MonoBehaviour
     [SerializeField] SoundManager _soundManager;
     void Start()
     {
+        SoundManager.Instance?.PlayTitleBGM();
+        Debug.Log("BGM—¬‚µ‚Ä‚Ü‚·");
         _image.gameObject.SetActive(false);
         _Startbutton.onClick.AddListener(SceneChange);
         //_Exitbutton.onClick.AddListener(SceneChange);
         //_Settingbutton.onClick.AddListener(_SettingScene);
-        if (_soundManager == null)
-            _soundManager = FindObjectOfType<SoundManager>();
     }
 
     void SceneChange()
     {
         StartCoroutine(Fadeout());
-        _soundManager.PlayButtonSe();
+        SoundManager.Instance?.PlayButtonSe();
     }
     IEnumerator Fadeout()
     {

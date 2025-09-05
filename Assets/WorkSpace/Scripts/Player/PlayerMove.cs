@@ -33,6 +33,7 @@ public class PlayerMove : MonoBehaviour
     }
     void Shoot()
     {
+        SoundManager.Instance?.PlayShootSe();
         GameObject bullet = Instantiate(_BulletPrefab, _muzzle.position, Quaternion.identity);
         if (bullet.TryGetComponent(out Rigidbody2D rigidBody2D))
         {

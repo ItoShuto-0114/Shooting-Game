@@ -10,12 +10,10 @@ public class SceneChanger : MonoBehaviour
     void Start()
     {
         _Titlebutton.onClick.AddListener(GoTitle);
-        if (_soundManager == null)
-            _soundManager = FindObjectOfType<SoundManager>();
-    }
-    void GoTitle()
-    {
-        _soundManager.PlayButtonSe();
-        SceneManager.LoadScene(_TitleScene);
+        void GoTitle()
+        {
+            SoundManager.Instance?.PlayButtonSe();
+            SceneManager.LoadScene(_TitleScene);
+        }
     }
 }

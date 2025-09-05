@@ -36,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
     }
     void Gameover()
     {
+        SoundManager.Instance?.StopButtleBGM();
         _isdead = true;
         _myGameManager.GameOver();
     }

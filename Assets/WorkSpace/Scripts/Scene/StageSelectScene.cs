@@ -12,7 +12,6 @@ public class StageSelectScene : MonoBehaviour
     [SerializeField] Button _Stage2button;
     [SerializeField] Button _Stage3button;
     [SerializeField] Image _image;
-    [SerializeField] SoundManager _soundManager;
     float _duration = 1.0f;
     void Start()
     {
@@ -20,12 +19,11 @@ public class StageSelectScene : MonoBehaviour
         _Stage1button.onClick.AddListener(() => FadeStart(_Stage1Scene));
         _Stage2button.onClick.AddListener(() => FadeStart(_Stage2Scene));
         _Stage3button.onClick.AddListener(() => FadeStart(_Stage3Scene));
-        if (_soundManager == null)
-            _soundManager = FindObjectOfType<SoundManager>();
     }
         void FadeStart(string sceneName)
         {
-            _soundManager.PlayButtonSe();
+        SoundManager.Instance?.StopTitleBGM();
+            SoundManager.Instance?.PlayButtonSe();
             StartCoroutine(Fadeout(sceneName));
         }
         IEnumerator Fadeout(string sceneName)

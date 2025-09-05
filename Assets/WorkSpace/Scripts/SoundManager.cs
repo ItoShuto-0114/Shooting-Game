@@ -18,15 +18,13 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
     void Awake()
     {
-        // すでに存在している場合は新しいやつを消す（シングルトン）
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // ← シーン遷移しても破棄されない！
-        }
-        else
+        // シングルトン化
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);  // ← シーンを跨いでも残す
     }
 }

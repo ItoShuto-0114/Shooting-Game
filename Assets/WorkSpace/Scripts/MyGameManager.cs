@@ -16,10 +16,12 @@ public class MyGameManager : MonoBehaviour
     }
     public void GameWin()
     {
+        SoundManager.Instance?.StopButtleBGM();
         SceneManager.LoadScene(_GameWinSceneName);
     }
     public void GameOver()
     {
+        SoundManager.Instance?.StopButtleBGM();
         SceneManager.LoadScene(_GameoverSceneName);
     }
 }
