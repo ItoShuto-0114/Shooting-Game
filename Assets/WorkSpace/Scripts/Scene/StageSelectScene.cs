@@ -1,6 +1,7 @@
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class StageSelectScene : MonoBehaviour
 {
@@ -10,22 +11,35 @@ public class StageSelectScene : MonoBehaviour
     [SerializeField] Button _Stage1button;
     [SerializeField] Button _Stage2button;
     [SerializeField] Button _Stage3button;
+    [SerializeField] Image _image;
+    [SerializeField] SoundManager _soundManager;
+    float _duration = 1.0f;
     void Start()
     {
-        _Stage1button.onClick.AddListener(Stage1);
-        _Stage2button.onClick.AddListener(Stage2);
-        _Stage3button.onClick.AddListener(Stage3);
+        _image.gameObject.SetActive(false);
+        _Stage1button.onClick.AddListener(() => FadeStart(_Stage1Scene));
+        _Stage2button.onClick.AddListener(() => FadeStart(_Stage2Scene));
+        _Stage3button.onClick.AddListener(() => FadeStart(_Stage3Scene));
+        if (_soundManager == null)
+            _soundManager = FindObjectOfType<SoundManager>();
     }
-    void Stage1()
-    {
-        SceneManager.LoadScene(_Stage1Scene);
+        void FadeStart(string sceneName)
+        {
+            _soundManager.PlayButtonSe();
+            StartCoroutine(Fadeout(sceneName));
+        }
+        IEnumerator Fadeout(string sceneName)
+        {
+            _image.gameObject.SetActive(true);
+            Color c = _image.color;
+            c.a = 0;
+            _image.color = c;
+            for (float t = 0; t < _duration; t += Time.deltaTime)
+            {
+                c.a = Mathf.Lerp(0f, 1f, t / _duration);
+                _image.color = c;
+                yield return null;
+            }
+            SceneManager.LoadScene(sceneName);
+        }
     }
-    void Stage2()
-    {
-        SceneManager.LoadScene(_Stage2Scene);
-    }
-    void Stage3()
-    {
-        SceneManager.LoadScene(_Stage3Scene);
-    }
-}
