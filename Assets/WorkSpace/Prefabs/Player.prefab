@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _myGameManager: {fileID: 0}
-  _maxHP: 100
+  _maxHP: 2000
   _currentHP: 100
   _PlayerHpBar: {fileID: 3445672808138165988}
   _isdead: 0

@@ -7,7 +7,6 @@ public class MySceneManager : MonoBehaviour
     [SerializeField] string _SelectScene;
     [SerializeField] Button _Startbutton;
     [SerializeField] Button _Exitbutton;
-    [SerializeField] private Button _Settingbutton;
     [SerializeField] Image _image;
     [SerializeField] float duration = 1.0f;
     [SerializeField] SoundManager _soundManager;
@@ -17,7 +16,7 @@ public class MySceneManager : MonoBehaviour
         Debug.Log("BGM—¬‚µ‚Ä‚Ü‚·");
         _image.gameObject.SetActive(false);
         _Startbutton.onClick.AddListener(SceneChange);
-        //_Exitbutton.onClick.AddListener(SceneChange);
+        _Exitbutton.onClick.AddListener(ExitGame);
         //_Settingbutton.onClick.AddListener(_SettingScene);
     }
 
@@ -25,6 +24,11 @@ public class MySceneManager : MonoBehaviour
     {
         StartCoroutine(Fadeout());
         SoundManager.Instance?.PlayButtonSe();
+    }
+    void ExitGame()
+    {
+        SoundManager.Instance?.PlayButtonSe();
+        Application.Quit();
     }
     IEnumerator Fadeout()
     {

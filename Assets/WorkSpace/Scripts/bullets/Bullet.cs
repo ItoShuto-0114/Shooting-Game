@@ -25,17 +25,23 @@ public class Bullet : MonoBehaviour
             {
                 var Enemy1 = collision.GetComponent<Enemy1>();
                 var Enemy2 = collision.GetComponent<Enemy2>();
+                var Enemy3 = collision.GetComponent<Enemy3>();
                 if (Enemy1 != null)
                 {
                     Enemy1.PlayertoDamage(_DamagetoEnemy);
                     Destroy(gameObject);
                 }
                 if (Enemy2 != null)
-
                 {
                     Enemy2.PlayertoDamage(_DamagetoEnemy);
                     Destroy(gameObject);
                 }
+                if(Enemy3 != null)
+                {
+                    Enemy3.PlayertoDamage(_DamagetoEnemy);
+                    Destroy(gameObject);
+                }
+
             }
             else if (_bulletType == BulletType.bullet && collision.CompareTag("Player") && _Targets == true)
             {

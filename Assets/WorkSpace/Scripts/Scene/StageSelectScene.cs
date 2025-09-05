@@ -22,7 +22,7 @@ public class StageSelectScene : MonoBehaviour
     }
         void FadeStart(string sceneName)
         {
-        SoundManager.Instance?.StopTitleBGM();
+            SoundManager.Instance?.StopTitleBGM();
             SoundManager.Instance?.PlayButtonSe();
             StartCoroutine(Fadeout(sceneName));
         }

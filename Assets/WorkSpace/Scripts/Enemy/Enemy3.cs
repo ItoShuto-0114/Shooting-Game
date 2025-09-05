@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy3 : MonoBehaviour
@@ -13,6 +12,14 @@ public class Enemy3 : MonoBehaviour
     [SerializeField] float _Enemy3currentHP = 100;
     [SerializeField] RectTransform _Enemy3HpBar;
     [SerializeField] float _Width = 100;
+    [SerializeField] GameObject _Minions;
+    [SerializeField] GameObject _Minions2;
+    [SerializeField] GameObject _Minions3;
+    [SerializeField] GameObject _Minions4;
+    [SerializeField] Transform _TargetsMinions;
+    [SerializeField] Transform _TargetsMinions2;
+    int count = 0;
+    int count2 = 0;
     float _timer = 0;
     void Awake()
     {
@@ -24,6 +31,11 @@ public class Enemy3 : MonoBehaviour
         _Enemy3currentHP = _Enemy3MaxHp;
         UpdateHpBar();
     }
+    void OnEnable()
+    {
+        StartCoroutine(MinionsLoop());
+    }
+
     void UpdateHpBar()
     {
         float ratio = _Enemy3currentHP / _Enemy3MaxHp;
@@ -31,12 +43,12 @@ public class Enemy3 : MonoBehaviour
     }
     void Update()
     {
-            _timer += Time.deltaTime;
-            if (_timer >= _Enemy3AttackInterval)
-            {
-                Shoot();
-                _timer = 0;
-            }
+        _timer += Time.deltaTime;
+        if (_timer >= _Enemy3AttackInterval)
+        {
+            Shoot();
+            _timer = 0;
+        }
     }
     void Shoot()
     {
@@ -55,5 +67,33 @@ public class Enemy3 : MonoBehaviour
             _myGameManager.GameWin();
         }
         Debug.Log(_damage + "ƒ_ƒ[ƒW—^‚¦‚½");
+    }
+    IEnumerator MinionsLoop()
+    {
+        while (true)
+        {
+            // ƒpƒ^[ƒ“2‚ğ1‰ñA13•bŠÔŠu‚Å
+            yield return StartCoroutine(MinionsMode2());
+            // ƒpƒ^[ƒ“1‚ğ1‰ñA13•bŠÔŠu‚Å
+            yield return StartCoroutine(Minions());
+        }
+    }
+    IEnumerator MinionsMode2()
+    {
+       
+            yield return new WaitForSeconds(9f);
+            Debug.Log("MinionsMode2: 10•b‚½‚Á‚½‚º‚¢");
+            Instantiate(_Minions3, _TargetsMinions.position, _TargetsMinions.rotation);
+            Instantiate(_Minions4, _TargetsMinions2.position, _TargetsMinions2.rotation);
+        
+    }
+    IEnumerator Minions()
+    {
+        
+            yield return new WaitForSeconds(11f);
+            Debug.Log("Minions: 13•b‚½‚Á‚½‚º‚¢");
+            Instantiate(_Minions, _TargetsMinions.position, _TargetsMinions.rotation);
+            Instantiate(_Minions2, _TargetsMinions2.position, _TargetsMinions2.rotation);
+        
     }
 }
