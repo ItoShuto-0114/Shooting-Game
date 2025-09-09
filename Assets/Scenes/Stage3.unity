@@ -233,8 +233,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Boss HP
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bd4cb3cb1ae5cb640baef9aae35b77f0, type: 2}
+  m_sharedMaterial: {fileID: 8561058642014595327, guid: bd4cb3cb1ae5cb640baef9aae35b77f0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1220,6 +1220,10 @@ PrefabInstance:
       propertyPath: _TargetsMinions2
       value: 
       objectReference: {fileID: 367587011}
+    - target: {fileID: 6243829552075823977, guid: da423b92c4870d341a711d30e9e5f51d, type: 3}
+      propertyPath: _Enemy3AttackInterval
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6854435507141872669, guid: da423b92c4870d341a711d30e9e5f51d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0

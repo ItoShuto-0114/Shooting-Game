@@ -324,7 +324,7 @@ MonoBehaviour:
   _Enemy3muzzle: {fileID: 7714967170281950929}
   _BulletPrefab: {fileID: 5483805480639853690, guid: 85ca740cd50c033459ee4260b1cf33b4, type: 3}
   _BulletSpeed: 10
-  _Enemy3AttackInterval: 6
+  _Enemy3AttackInterval: 7
   _Enemy3MaxHp: 1000
   _Enemy3currentHP: 100
   _Enemy3HpBar: {fileID: 5169384807695210117}
